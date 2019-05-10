@@ -1,0 +1,54 @@
+commit f6d4999f7081c9076f9196a2f901c836d62b105a
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Fri May 3 16:46:54 2019 -0400
+
+    set up
+
+ .gitignore                                         | 125 +++++++++++++++
+ android/AndroidManifest.xml                        |  24 +++
+ android/assets/badlogic.jpg                        | Bin 0 -> 68465 bytes
+ android/build.gradle                               | 144 +++++++++++++++++
+ android/ic_launcher-web.png                        | Bin 0 -> 22195 bytes
+ android/proguard-rules.pro                         |  45 ++++++
+ android/project.properties                         |   9 ++
+ android/res/drawable-anydpi-v26/ic_launcher.xml    |   6 +
+ .../drawable-anydpi-v26/ic_launcher_foreground.xml |  40 +++++
+ android/res/drawable-hdpi/ic_launcher.png          | Bin 0 -> 16820 bytes
+ android/res/drawable-mdpi/ic_launcher.png          | Bin 0 -> 16124 bytes
+ android/res/drawable-xhdpi/ic_launcher.png         | Bin 0 -> 17915 bytes
+ android/res/drawable-xxhdpi/ic_launcher.png        | Bin 0 -> 18746 bytes
+ android/res/drawable-xxxhdpi/ic_launcher.png       | Bin 0 -> 19448 bytes
+ android/res/values/color.xml                       |   4 +
+ android/res/values/strings.xml                     |   6 +
+ android/res/values/styles.xml                      |  12 ++
+ android/src/com/qi/mariobros/AndroidLauncher.java  |  16 ++
+ build.gradle                                       |  91 +++++++++++
+ core/build.gradle                                  |  11 ++
+ core/src/com/qi/mariobros/SupMario.java            |  33 ++++
+ desktop/build.gradle                               |  55 +++++++
+ .../com/qi/mariobros/desktop/DesktopLauncher.java  |  12 ++
+ gradle.properties                                  |   3 +
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54208 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ settings.gradle                                    |   1 +
+ 29 files changed, 899 insertions(+)
+
+commit 7784bb2b5b69ae5e562816d2742ffa446e303421
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Fri May 3 16:30:44 2019 -0400
+
+    Update README.md
+
+ README.md | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit c32231fe6f97e31f41804463fd418b9c3a8e4fc9
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Fri May 3 16:25:56 2019 -0400
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
