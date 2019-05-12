@@ -7,6 +7,7 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -32,6 +33,7 @@ import com.qi.mariobros.Tools.B2WorldCreator;
 
 public class PlayScreen implements Screen {
     private SupMario game;
+    private TextureAtlas atlas;
     private OrthographicCamera gamecam;
     private Viewport gamePort;
     private Hud hud;
@@ -46,6 +48,8 @@ public class PlayScreen implements Screen {
     private Mario player;
 
     public PlayScreen(SupMario game){
+        atlas = new TextureAtlas("Mario_and_Enemies.pack");
+
         this.game = game;
         gamecam = new OrthographicCamera();
         gamePort = new FitViewport(SupMario.V_WIDTH / SupMario.PPM,SupMario.V_HEIGHT / SupMario.PPM,gamecam);
@@ -61,8 +65,13 @@ public class PlayScreen implements Screen {
 
         new B2WorldCreator(world, map);
 
-        this.player = new Mario(world);
+        player = new Mario(world, this);
     }
+
+    public TextureAtlas getAtlas(){
+        return atlas;
+    }
+
     @Override
     public void show() {
 
@@ -85,6 +94,8 @@ public class PlayScreen implements Screen {
 
         world.step(1/60f, 6, 2);
 
+        player.update(dt);
+
         gamecam.position.x = player.b2body.getPosition().x;
 
         gamecam.update();
@@ -102,6 +113,11 @@ public class PlayScreen implements Screen {
         renderer.render();
 
         b2dr.render(world, gamecam.combined);
+
+        game.batch.setProjectionMatrix(gamecam.combined);
+        game.batch.begin();
+        player.draw(game.batch);
+        game.batch.end();
 
         game.batch.setProjectionMatrix(hud.stage.getCamera().combined);
         hud.stage.draw();
