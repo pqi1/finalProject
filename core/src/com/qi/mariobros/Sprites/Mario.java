@@ -39,7 +39,6 @@ public class Mario extends Sprite {
         for(int i = 0; i < 4; i++){
             frames.add(new TextureRegion(getTexture(), i  * 16 + 1, 11, 16, 16));
         }
-
         marioRun = new Animation(0.1f, frames);
         frames.clear();
 
@@ -70,7 +69,7 @@ public class Mario extends Sprite {
                 region = (TextureRegion) marioJump.getKeyFrame(stateTimer);
                 break;
             case RUNNING:
-                region = (TextureRegion) marioRun.getKeyFrame(stateTimer);
+                region = (TextureRegion) marioRun.getKeyFrame(stateTimer, true);
                 break;
             case FALLING:
             case STANDING:
@@ -82,7 +81,8 @@ public class Mario extends Sprite {
         if((b2body.getLinearVelocity().x < 0 || !runningRight) && !region.isFlipX()){
             region.flip(true, false);
             runningRight = false;
-        }else if((b2body.getLinearVelocity().x > 0 || runningRight) && region.isFlipX()){
+        }
+        else if((b2body.getLinearVelocity().x > 0 || runningRight) && region.isFlipX()){
             region.flip(true, false);
             runningRight = true;
         }
