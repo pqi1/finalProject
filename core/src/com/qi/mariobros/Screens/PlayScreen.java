@@ -30,6 +30,7 @@ import com.qi.mariobros.Scenes.Hud;
 import com.qi.mariobros.Sprites.Mario;
 import com.qi.mariobros.SupMario;
 import com.qi.mariobros.Tools.B2WorldCreator;
+import com.qi.mariobros.Tools.WorldContactListener;
 
 public class PlayScreen implements Screen {
     private SupMario game;
@@ -66,6 +67,8 @@ public class PlayScreen implements Screen {
         new B2WorldCreator(world, map);
 
         player = new Mario(world, this);
+
+        world.setContactListener(new WorldContactListener());
     }
 
     public TextureAtlas getAtlas(){

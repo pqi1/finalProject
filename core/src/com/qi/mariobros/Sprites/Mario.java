@@ -3,9 +3,11 @@ package com.qi.mariobros.Sprites;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
+import com.badlogic.gdx.physics.box2d.EdgeShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
@@ -115,10 +117,19 @@ public class Mario extends Sprite {
 
         FixtureDef fdef = new FixtureDef();
         CircleShape shape = new CircleShape();
-        shape.setRadius(5 / SupMario.PPM);
+        shape.setRadius(6 / SupMario.PPM);
+
+        fdef.filter.categoryBits = SupMario.MARIO_BIT;
+        fdef.filter.maskBits = SupMario.DEFAULT_BIT | SupMario.BRICK_BIT | SupMario.COIN_BIT;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
 
+        EdgeShape head = new EdgeShape();
+        head.set(new Vector2(-2/SupMario.PPM, 6 /SupMario.PPM), new Vector2(2/SupMario.PPM, 6 /SupMario.PPM));
+        fdef.shape = head;
+        fdef.isSensor = true;
+
+        b2body.createFixture(fdef).setUserData("head");
     }
 }
