@@ -12,7 +12,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.qi.mariobros.Screens.PlayScreen;
 
 public class SupMario extends Game {
-	public static final int V_WIDTH = 400;
+	public static final int V_WIDTH = 500;
 	public static final int V_HEIGHT = 208;
 	public static final float PPM = 100;
 

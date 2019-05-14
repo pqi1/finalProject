@@ -64,6 +64,7 @@ public class PlayScreen implements Screen {
 
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("level1.tmx");
+        map.getLayers().get(3).setOpacity(0);
         renderer = new OrthogonalTiledMapRenderer(map, 1  / SupMario.PPM);
         gamecam.position.set(gamePort.getWorldWidth()/ 2, gamePort.getWorldHeight() / 2, 0);
 
