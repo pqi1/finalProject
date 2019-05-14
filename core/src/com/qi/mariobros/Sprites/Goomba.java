@@ -100,7 +100,7 @@ public class Goomba extends Enemy
 
 
     public void hitOnHead() {
-        setToDestroy = true;
+        //setToDestroy = true;
     }
 
 
