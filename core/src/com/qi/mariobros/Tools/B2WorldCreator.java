@@ -46,6 +46,7 @@ public class B2WorldCreator {
 
             shape.setAsBox(rect.getWidth() / 2 / SupMario.PPM, rect.getHeight() / 2 / SupMario.PPM);
             fdef.shape = shape;
+            fdef.filter.categoryBits = SupMario.OBJECT_BIT;
             body.createFixture(fdef);
         }
 

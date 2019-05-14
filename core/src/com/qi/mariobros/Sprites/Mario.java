@@ -3,6 +3,7 @@ package com.qi.mariobros.Sprites;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
@@ -68,7 +69,7 @@ public class Mario extends Sprite {
         TextureRegion region;
         switch (currentState){
             case JUMPING:
-                region = (TextureRegion) marioJump.getKeyFrame(stateTimer);
+                region = (TextureRegion) marioJump.getKeyFrame(stateTimer, true);
                 break;
             case RUNNING:
                 region = (TextureRegion) marioRun.getKeyFrame(stateTimer, true);
@@ -120,7 +121,7 @@ public class Mario extends Sprite {
         shape.setRadius(6 / SupMario.PPM);
 
         fdef.filter.categoryBits = SupMario.MARIO_BIT;
-        fdef.filter.maskBits = SupMario.DEFAULT_BIT | SupMario.BRICK_BIT | SupMario.COIN_BIT;
+        fdef.filter.maskBits = SupMario.Ground_BIT | SupMario.BRICK_BIT | SupMario.COIN_BIT | SupMario.ENEMY_BIT | SupMario.OBJECT_BIT;
 
         fdef.shape = shape;
         b2body.createFixture(fdef);
