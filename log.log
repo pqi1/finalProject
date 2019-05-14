@@ -1,0 +1,327 @@
+commit 0948b55f6103b3378c50557657de95e0c0eda118
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon May 13 23:08:21 2019 -0400
+
+    enemy can be killed
+
+ android/assets/level1.tmx                         | 14 +++++++-------
+ core/src/com/qi/mariobros/Screens/PlayScreen.java |  1 +
+ core/src/com/qi/mariobros/SupMario.java           |  2 +-
+ 3 files changed, 9 insertions(+), 8 deletions(-)
+
+commit e4eb2d3d485b66a477af5161f6f21b510f87c2c1
+Merge: 2458880 db20685
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon May 13 22:10:38 2019 -0400
+
+    Merge branch 'master' of https://github.com/pqi1/finalProject
+
+commit 24588806eba6c18ffc184d8106acaecbda3d22ad
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon May 13 22:10:13 2019 -0400
+
+    make some change on the map
+
+ android/assets/level1.tmx                     | 14 +++----
+ core/src/com/qi/mariobros/Sprites/Goomba.java |  2 +-
+ log.log                                       | 54 ---------------------------
+ 3 files changed, 8 insertions(+), 62 deletions(-)
+
+commit db206850fe2a4cacdb23e56ac8e8e9940878fd8c
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Mon May 13 21:45:31 2019 -0400
+
+    Update README.md
+
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 6375c0fc61a41c32739cf643bec2e940f59791ac
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Mon May 13 21:45:14 2019 -0400
+
+    Update README.md
+
+ README.md | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit ea33c645549dd99e536326207e70092f771214f3
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon May 13 21:33:55 2019 -0400
+
+    goomb destory
+
+ core/src/com/qi/mariobros/Sprites/Enemy.java       |  1 +
+ core/src/com/qi/mariobros/Sprites/Goomba.java      | 78 ++++++++++++++++++----
+ core/src/com/qi/mariobros/Sprites/Mario.java       |  4 +-
+ core/src/com/qi/mariobros/SupMario.java            |  3 +-
+ .../qi/mariobros/Tools/WorldContactListener.java   | 15 +++++
+ 5 files changed, 85 insertions(+), 16 deletions(-)
+
+commit 79e91b1dbb9392fe83321e1c0caad1baaaae61fb
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon May 13 20:10:51 2019 -0400
+
+    goomb up
+
+ core/src/com/qi/mariobros/Screens/PlayScreen.java  |  8 +++-
+ core/src/com/qi/mariobros/Sprites/Enemy.java       | 20 ++++++++
+ core/src/com/qi/mariobros/Sprites/Goomba.java      | 55 ++++++++++++++++++++++
+ core/src/com/qi/mariobros/Sprites/Mario.java       |  5 +-
+ core/src/com/qi/mariobros/SupMario.java            |  5 +-
+ .../src/com/qi/mariobros/Tools/B2WorldCreator.java |  1 +
+ 6 files changed, 90 insertions(+), 4 deletions(-)
+
+commit 1f706d65acc8b4711f7d0559c8ea3e1e990d7f4d
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Mon May 13 19:35:08 2019 -0400
+
+    code clean up
+
+ core/src/com/qi/mariobros/Screens/PlayScreen.java            | 12 ++++++++++--
+ core/src/com/qi/mariobros/Sprites/Brick.java                 |  5 +++--
+ core/src/com/qi/mariobros/Sprites/Coin.java                  |  5 +++--
+ core/src/com/qi/mariobros/Sprites/InteractiveTileObject.java |  8 +++++---
+ core/src/com/qi/mariobros/Sprites/Mario.java                 |  4 ++--
+ core/src/com/qi/mariobros/Tools/B2WorldCreator.java          | 10 +++++++---
+ 6 files changed, 30 insertions(+), 14 deletions(-)
+
+commit 71e541887f426d9fb8f46bac10fd1299ffede227
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun May 12 23:52:01 2019 -0400
+
+    coin collection music
+
+ android/assets/level1.tmx | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit e58d672221251749bf5fc74e7f4f3214f1877c89
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun May 12 23:36:11 2019 -0400
+
+    background sound up
+
+ core/src/com/qi/mariobros/Screens/PlayScreen.java |  7 +++++++
+ core/src/com/qi/mariobros/Sprites/Brick.java      |  3 +++
+ core/src/com/qi/mariobros/Sprites/Coin.java       |  6 ++++++
+ core/src/com/qi/mariobros/SupMario.java           | 18 ++++++++++++++++++
+ 4 files changed, 34 insertions(+)
+
+commit e5be401981ee755e694a8339d3b7de18aa766182
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun May 12 23:19:34 2019 -0400
+
+    coin score add up
+
+ core/src/com/qi/mariobros/Scenes/Hud.java         | 13 +++++++++++++
+ core/src/com/qi/mariobros/Screens/PlayScreen.java |  2 ++
+ core/src/com/qi/mariobros/Sprites/Brick.java      |  2 ++
+ core/src/com/qi/mariobros/Sprites/Coin.java       |  9 +++++++++
+ 4 files changed, 26 insertions(+)
+
+commit ef153ce3930a6e9d47f9681e48f1e9dc54e91b5d
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun May 12 23:06:53 2019 -0400
+
+    Brick borken done
+
+ core/src/com/qi/mariobros/Sprites/Brick.java                 | 2 ++
+ core/src/com/qi/mariobros/Sprites/InteractiveTileObject.java | 7 +++++++
+ 2 files changed, 9 insertions(+)
+
+commit 99a061ff3f6fe00311bb7ddf4bb4f314de598386
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sun May 12 22:50:12 2019 -0400
+
+    brick collision
+
+ core/src/com/qi/mariobros/Screens/PlayScreen.java  |  3 ++
+ core/src/com/qi/mariobros/Sprites/Brick.java       | 10 ++++++
+ core/src/com/qi/mariobros/Sprites/Coin.java        |  7 ++++
+ .../mariobros/Sprites/InteractiveTileObject.java   | 14 ++++++--
+ core/src/com/qi/mariobros/Sprites/Mario.java       | 13 ++++++-
+ core/src/com/qi/mariobros/SupMario.java            |  6 ++++
+ .../qi/mariobros/Tools/WorldContactListener.java   | 41 ++++++++++++++++++++++
+ 7 files changed, 91 insertions(+), 3 deletions(-)
+
+commit f63cf918959057beb74046d01e9991dd7bdeaf59
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 23:20:04 2019 -0400
+
+    running problem fixed
+
+ core/src/com/qi/mariobros/Sprites/Mario.java | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit 7cc1a4ae20e95abe28312b95287074814cd35e42
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 23:07:29 2019 -0400
+
+    mario can run and jump still have little bug
+
+ core/src/com/qi/mariobros/Sprites/Mario.java | 80 +++++++++++++++++++++++++++-
+ 1 file changed, 79 insertions(+), 1 deletion(-)
+
+commit 8d279ba0751d18aa296f438ba05d3441d2a1e80e
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 22:23:39 2019 -0400
+
+    mario stand up
+
+ core/src/com/qi/mariobros/Screens/PlayScreen.java | 18 +++++++++++++++++-
+ core/src/com/qi/mariobros/Sprites/Mario.java      | 14 +++++++++++++-
+ 2 files changed, 30 insertions(+), 2 deletions(-)
+
+commit 1eb0a5589329a2a05f79b93fa76f4ff707940bef
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 21:48:12 2019 -0400
+
+    clean up and brick coin up
+
+ core/src/com/qi/mariobros/Scenes/Hud.java          |  7 ++-
+ core/src/com/qi/mariobros/Screens/PlayScreen.java  | 61 +++-------------------
+ core/src/com/qi/mariobros/Sprites/Brick.java       | 11 ++++
+ core/src/com/qi/mariobros/Sprites/Coin.java        | 11 ++++
+ .../mariobros/Sprites/InteractiveTileObject.java   | 39 ++++++++++++++
+ .../src/com/qi/mariobros/Tools/B2WorldCreator.java | 60 +++++++++++++++++++++
+ 6 files changed, 135 insertions(+), 54 deletions(-)
+
+commit 07a09480ddb44f0f3a142d164fb0a550aaec0306
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 21:19:02 2019 -0400
+
+    map bug fixed
+
+ android/assets/level1.tmx                         | 10 +++---
+ core/src/com/qi/mariobros/Screens/PlayScreen.java | 44 +++++++++++++++--------
+ core/src/com/qi/mariobros/Sprites/Mario.java      | 34 ++++++++++++++++++
+ core/src/com/qi/mariobros/SupMario.java           |  2 ++
+ 4 files changed, 71 insertions(+), 19 deletions(-)
+
+commit 2a751b553adb14dc3e1f8c4db25dabd5ede58df8
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 17:42:36 2019 -0400
+
+    box2d
+
+ android/assets/level1.tmx                         | 24 ++++----
+ core/src/com/qi/mariobros/Screens/PlayScreen.java | 71 +++++++++++++++++++++++
+ 2 files changed, 83 insertions(+), 12 deletions(-)
+
+commit fb4d35b4df6d49a15bd2ac86675880a7b41e2ba2
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 16:30:59 2019 -0400
+
+    map built up
+
+ android/assets/Mario GFX/big_mario.png            | Bin 0 -> 5956 bytes
+ android/assets/Mario GFX/fireball.png             | Bin 0 -> 188 bytes
+ android/assets/Mario GFX/goomba.png               | Bin 0 -> 3079 bytes
+ android/assets/Mario GFX/little_mario.png         | Bin 0 -> 4525 bytes
+ android/assets/Mario GFX/mushroom.png             | Bin 0 -> 274 bytes
+ android/assets/Mario GFX/turtle.png               | Bin 0 -> 3679 bytes
+ android/assets/Mario_and_Enemies.pack             |  47 +++++
+ android/assets/Mario_and_Enemies.png              | Bin 0 -> 3620 bytes
+ android/assets/audio/music/mario_music.ogg        | Bin 0 -> 2486172 bytes
+ android/assets/audio/sounds/breakblock.wav        | Bin 0 -> 25090 bytes
+ android/assets/audio/sounds/bump.wav              | Bin 0 -> 10426 bytes
+ android/assets/audio/sounds/coin.wav              | Bin 0 -> 42654 bytes
+ android/assets/audio/sounds/mariodie.wav          | Bin 0 -> 120570 bytes
+ android/assets/audio/sounds/powerdown.wav         | Bin 0 -> 35538 bytes
+ android/assets/audio/sounds/powerup.wav           | Bin 0 -> 44580 bytes
+ android/assets/audio/sounds/powerup_spawn.wav     | Bin 0 -> 26728 bytes
+ android/assets/audio/sounds/stomp.wav             | Bin 0 -> 13070 bytes
+ android/assets/level1.tmx                         | 237 ++++++++++++++++++++++
+ android/assets/tileset_gutter.png                 | Bin 0 -> 37666 bytes
+ core/src/com/qi/mariobros/Scenes/Hud.java         |  22 +-
+ core/src/com/qi/mariobros/Screens/PlayScreen.java |  33 ++-
+ 21 files changed, 327 insertions(+), 12 deletions(-)
+
+commit db7e95ba29470de3bfebee17e25dcd5ec5dd1df6
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Sat May 11 00:09:33 2019 -0400
+
+    score board on
+
+ core/src/com/qi/mariobros/Scenes/Hud.java         | 61 +++++++++++++++++++++++
+ core/src/com/qi/mariobros/Screens/PlayScreen.java | 13 ++---
+ core/src/com/qi/mariobros/SupMario.java           |  2 +
+ 3 files changed, 70 insertions(+), 6 deletions(-)
+
+commit 9451fb42284289078f3601e852e03b4f93320061
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Fri May 10 22:29:58 2019 -0400
+
+    view ports
+
+ core/src/com/qi/mariobros/Screens/PlayScreen.java | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+
+commit 01936fa203217aa0ced6ee9ffe99539a6a00715b
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Thu May 9 23:28:25 2019 -0400
+
+    build my own screen
+
+ Mario_and_Enemies.png                             | Bin 0 -> 3620 bytes
+ big_mario.png                                     | Bin 0 -> 5956 bytes
+ core/src/com/qi/mariobros/Screens/PlayScreen.java |  56 ++++++++++++++++++++++
+ core/src/com/qi/mariobros/SupMario.java           |  23 ++++-----
+ log.log                                           |  54 +++++++++++++++++++++
+ tileset_gutter.png                                | Bin 0 -> 37666 bytes
+ 6 files changed, 118 insertions(+), 15 deletions(-)
+
+commit f6d4999f7081c9076f9196a2f901c836d62b105a
+Author: pqi1 <pqi1@binghamton.edu>
+Date:   Fri May 3 16:46:54 2019 -0400
+
+    set up
+
+ .gitignore                                         | 125 +++++++++++++++
+ android/AndroidManifest.xml                        |  24 +++
+ android/assets/badlogic.jpg                        | Bin 0 -> 68465 bytes
+ android/build.gradle                               | 144 +++++++++++++++++
+ android/ic_launcher-web.png                        | Bin 0 -> 22195 bytes
+ android/proguard-rules.pro                         |  45 ++++++
+ android/project.properties                         |   9 ++
+ android/res/drawable-anydpi-v26/ic_launcher.xml    |   6 +
+ .../drawable-anydpi-v26/ic_launcher_foreground.xml |  40 +++++
+ android/res/drawable-hdpi/ic_launcher.png          | Bin 0 -> 16820 bytes
+ android/res/drawable-mdpi/ic_launcher.png          | Bin 0 -> 16124 bytes
+ android/res/drawable-xhdpi/ic_launcher.png         | Bin 0 -> 17915 bytes
+ android/res/drawable-xxhdpi/ic_launcher.png        | Bin 0 -> 18746 bytes
+ android/res/drawable-xxxhdpi/ic_launcher.png       | Bin 0 -> 19448 bytes
+ android/res/values/color.xml                       |   4 +
+ android/res/values/strings.xml                     |   6 +
+ android/res/values/styles.xml                      |  12 ++
+ android/src/com/qi/mariobros/AndroidLauncher.java  |  16 ++
+ build.gradle                                       |  91 +++++++++++
+ core/build.gradle                                  |  11 ++
+ core/src/com/qi/mariobros/SupMario.java            |  33 ++++
+ desktop/build.gradle                               |  55 +++++++
+ .../com/qi/mariobros/desktop/DesktopLauncher.java  |  12 ++
+ gradle.properties                                  |   3 +
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54208 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ settings.gradle                                    |   1 +
+ 29 files changed, 899 insertions(+)
+
+commit 7784bb2b5b69ae5e562816d2742ffa446e303421
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Fri May 3 16:30:44 2019 -0400
+
+    Update README.md
+
+ README.md | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit c32231fe6f97e31f41804463fd418b9c3a8e4fc9
+Author: pqi1 <42855859+pqi1@users.noreply.github.com>
+Date:   Fri May 3 16:25:56 2019 -0400
+
+    Initial commit
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
